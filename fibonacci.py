@@ -18,7 +18,7 @@ def fibonacci (terms):
   else:
     return fibonacci(terms - 1) + fibonacci (terms - 2)
 
-for i in range (terms)
+for i in range (terms):
   print(fibonacci(i), end= " ")
   
   
