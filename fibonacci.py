@@ -16,14 +16,16 @@ while (True):
 def fibonacci (terms):
   if (terms == 0):
     return 0
-  elif (terms == 1):
+  if (terms == 1):
     return 0
   elif (terms == 2):
     return 1
   else:
     return fibonacci(terms - 1) + fibonacci (terms - 2)
 
-for i in range (terms):
+for i in range (1, terms + 1):
   print(fibonacci(i), end= " ")
+  
+print("")
   
   
