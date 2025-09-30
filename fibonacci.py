@@ -13,7 +13,9 @@ while (true):
     break;
 
 def fibonacci (terms):
-  if (terms == 1):
+  if (terms == 0):
+    return 0
+  else if (terms == 1):
     return 0
   else if (terms == 2):
     return 1
