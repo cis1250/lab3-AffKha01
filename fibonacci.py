@@ -5,19 +5,20 @@
 # Prompt the user for the number of terms.
 # Validate that the input is a positive integer.
 # Use a for loop to print the Fibonacci sequence up to that many terms.
-while (true):
-  terms = input("Please enter the number of terms")
+while (True):
+  print("Please enter the number of terms")
+  terms = int(input())
   if (terms <= 0):
     print("Incorrect input, please input a integer greater than 0")
   else:
-    break;
+    break
 
 def fibonacci (terms):
   if (terms == 0):
     return 0
-  else if (terms == 1):
+  elif (terms == 1):
     return 0
-  else if (terms == 2):
+  elif (terms == 2):
     return 1
   else:
     return fibonacci(terms - 1) + fibonacci (terms - 2)
