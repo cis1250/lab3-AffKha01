@@ -5,3 +5,5 @@
 # Prompt the user for the number of terms.
 # Validate that the input is a positive integer.
 # Use a for loop to print the Fibonacci sequence up to that many terms.
+
+terms = input
