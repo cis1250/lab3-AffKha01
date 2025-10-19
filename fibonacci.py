@@ -29,3 +29,4 @@ for i in range (1, terms + 1):
 print("")
   
   
+# your code breaks with a string input. -1
