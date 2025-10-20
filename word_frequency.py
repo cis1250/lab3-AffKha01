@@ -49,3 +49,6 @@ for word in words:
         index = unique.index(word)
         frequency[index] = frequency[index] + 1
         
+print("\nFrequencies: ")
+for i in range(len(unique)):
+    print(unique[i], ":", frequency[i])
