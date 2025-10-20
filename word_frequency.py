@@ -42,6 +42,7 @@ frequency = []
 
 for word in words:
     word = word.lower()
+    word = word.strip(".,!?")
     if word not in unique:
         unique.append(word)
         frequency.append(1)
@@ -52,3 +53,4 @@ for word in words:
 print("\nFrequencies: ")
 for i in range(len(unique)):
     print(unique[i], ":", frequency[i])
+
