@@ -28,29 +28,36 @@ def is_sentence(text):
         return False
 
     return True
+def get_sentence():
+    user_sentence = input("Enter a sentence: ")
+    while (is_sentence(user_sentence) == False):
+        print("This does not meet the criteria for a sentence.")
+        user_sentence = input("Enter a sentence: ")
+    return user_sentence
 
-user_sentence = input("Enter a sentence: ")
-
-while (is_sentence(user_sentence) == False):
-    print("This does not meet the criteria for a sentence.")
-    user_input = input("Enter a sentence: ")
+def calculate_freq(sentence):
+    words = sentence.split()
+    unique = []
+    frequency = []
+    for word in words:
+        word = word.lower()
+        word = word.strip(".,!?")
+        if word not in unique:
+            unique.append(word)
+            frequency.append(1)
+        else:
+            index = unique.index(word)
+            frequency[index] = frequency[index] + 1
+    return unique, frequency
     
-words = user_sentence.split()
+def print_freq(words, frequencies):       
+    print("\nFrequencies: ")
+    for i in range(len(words)):
+        print(words[i], ":", frequencies[i])
 
-unique = []
-frequency = []
-
-for word in words:
-    word = word.lower()
-    word = word.strip(".,!?")
-    if word not in unique:
-        unique.append(word)
-        frequency.append(1)
-    else:
-        index = unique.index(word)
-        frequency[index] = frequency[index] + 1
-        
-print("\nFrequencies: ")
-for i in range(len(unique)):
-    print(unique[i], ":", frequency[i])
-
+def main():
+    sentence = get_sentence()
+    words, frequencies = calculate_freq(sentence)
+    print_freq(words, frequencies)
+    
+main()
